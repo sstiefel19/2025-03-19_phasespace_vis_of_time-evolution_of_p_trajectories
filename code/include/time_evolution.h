@@ -37,11 +37,18 @@ class Time_evolution {
     int Run();
 
     // member variables
-    State fStartState;
-    State fEndState;
-
+    
     private:
     std::string fID;
     size_t fNSteps;
     std::vector<State> fStates;
+        
+    // transient
+    State&  fStartState;
+    State* fEndState;
+    
+    // status
+    bool fIsInitialized;
+    bool fEndStateDefined;
+    
 };

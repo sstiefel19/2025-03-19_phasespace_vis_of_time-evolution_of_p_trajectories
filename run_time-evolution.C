@@ -3,7 +3,7 @@
 
 int run_time_evolution(){
 
-    size_t nSteps = 3;
+    size_t nSteps = 5;
     Time_evolution lTimeEvolution("t1", nSteps);
 
     lTimeEvolution.Init();

@@ -19,7 +19,11 @@ Time_evolution::State::~State() {
 Time_evolution::Time_evolution(std::string _ID, size_t _nSteps) :
     fID(_ID),
     fNSteps(_nSteps),
-    fStates(_nSteps) 
+    fStates(_nSteps),
+    fStartState(fStates[0]),
+    fEndState(nullptr),
+    fIsInitialized(false),
+    fEndStateDefined(false) 
 {
     printf("Time_evolution::Time_evolution(): INFO: id: %s created with %zu steps.\n", fID.data(), _nSteps);    
 
