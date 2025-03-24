@@ -1,7 +1,7 @@
 
 #include "code/include/time_evolution.h"
 
-int run_time_evolution(){
+int main(){
 
     size_t nSteps = 5;
     Time_evolution lTimeEvolution("t1", nSteps);
