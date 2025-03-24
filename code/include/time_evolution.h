@@ -1,6 +1,11 @@
 #pragma once
 
-//#include "/Users/stephanstiefelmaier/work/alice/sw/osx_arm64/ROOT/latest/include/TParticle.h"
+// #include <TROOT.h>
+
+#include "/Users/stephanstiefelmaier/work/alice/sw/osx_arm64/ROOT/latest/include/Rtypes.h"
+#include "/Users/stephanstiefelmaier/work/alice/sw/osx_arm64/ROOT/latest/include/RConfigure.h"
+
+#include "/Users/stephanstiefelmaier/work/alice/sw/osx_arm64/ROOT/latest/include/TParticle.h"
 
 // #include <TParticle.h>
 #include <iostream>
@@ -33,7 +38,7 @@ public:
   private:
     std::string fID;
     double fTime;
-    // std::vector<TParticle> fParticles;
+    std::vector<TParticle> fParticles;
   };
 
   Time_evolution(std::string _ID, size_t _nSteps);

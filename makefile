@@ -25,7 +25,7 @@ OBJS = $(SRCS:.cpp=.o)
 
 # Executable target
 my_executable: $(OBJS)
-	$(CXX) $(CXXOPT) $(OBJS) `root-config --cflags --glibs` -I ${PYTHIA8}/include ${PYTHIA8}/lib/libpythia8.$(SOSUFFIX) $(ROOTLIBDIR)/libEGPythia8.so -o my_executable
+	$(CXX) $(CXXOPT) $(OBJS) `root-config --cflags --glibs` -I ${ROOTSYS} ${PYTHIA8}/include ${PYTHIA8}/lib/libpythia8.$(SOSUFFIX) $(ROOTLIBDIR)/libEGPythia8.so -o my_executable
 
 # Pattern rule for compiling .cpp files to .o files
 %.o: %.cpp
